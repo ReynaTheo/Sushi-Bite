@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.toggle('show');
     });
 
+    // Order functionality
     const cartItemsContainer = document.querySelector('.order-items');
     const totalPriceElement = document.getElementById('total-price');
     const placeOrderButton = document.querySelector('.place-order');
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    // Format currency helper functions
     function formatPriceToNumber(priceStr) {
         return parseFloat(priceStr.replace(/[^\d.]/g, ''));
     }
@@ -80,19 +82,80 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    placeOrderButton.addEventListener('click', () => {
-        localStorage.removeItem('cart');
-        alert('Thank you for your order! Your delicious sushi is on its way!');
-        window.location.href = '../html/home.html';
-    });
-
-    cancelOrderButton.addEventListener('click', () => {
-        if (confirm('Are you sure you want to cancel your order?')) {
-            localStorage.removeItem('cart');
-            window.location.href = '../html/menu.html';
-        }
-    });
-
+    // Initialize
     renderCart();
     setupButtonEvents();
 });
+
+
+const overlay = document.getElementById('popupOverlay');
+    const popupContent = document.getElementById('popupContent');
+
+    const showPopup = (html) => {
+      popupContent.innerHTML = html;
+      overlay.style.display = 'flex';
+    };
+
+    const hidePopup = () => {
+      overlay.style.display = 'none';
+    };
+
+    document.getElementById('placeOrderBtn').addEventListener('click', () => {
+      showConfirmation();
+    });
+
+    const showConfirmation = () => {
+      showPopup(`
+        <p>Are you sure you want to place this order?</p>
+        <button class="yes" onclick="handleConfirmYes()">Yes</button>
+        <button class="no" onclick="handleConfirmNo()">No</button>
+      `);
+    };
+
+    const handleConfirmYes = () => {
+      const transactionId = Math.floor(Math.random() * 1000000);
+      showPopup(`
+        <p>Thank you for your order! Your delicious sushi is on its way!</p>
+        <div id="qr-code">QR</div>
+        <p>Transaction ID: ${transactionId}</p>
+        <p id="click"><small>Click anywhere to return to the menu</small></p>
+      `);
+
+       setTimeout(() => {
+        overlay.onclick = () => {
+        window.location.href = "menu.html";
+    };
+  }, 100); 
+};
+    const handleConfirmNo = () => {
+      hidePopup();
+    };
+
+    // const cancelYes = () => {
+    //   window.location.href = "menu.html";
+    // };
+
+    // const cancelNo = () => {
+    //   hidePopup();
+    // };
+
+    document.getElementById('cancelOrderBtn').addEventListener('click', () => {
+      showCancelConfirmation();
+    });
+
+    const showCancelConfirmation = () => {
+      showPopup(`
+        <p>Are you sure you want to cancel this order?</p>
+        <button class="yes" onclick="cancelYes()">Yes</button>
+        <button onclick="cancelNo()">No</button>
+      `);
+    };
+
+    const cancelYes = () => {
+      window.location.href = "menu.html";
+    };
+
+    const cancelNo = () => {
+      hidePopup();
+    };
+   
