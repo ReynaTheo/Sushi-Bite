@@ -28,6 +28,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+     function showNotification(message) {
+        // Buat elemen notifikasi jika belum ada
+        let notification = document.querySelector('.notification');
+        if (!notification) {
+            notification = document.createElement('div');
+            notification.className = 'notification';
+            document.body.appendChild(notification);
+        }
+        
+        notification.textContent = message;
+        notification.classList.add('show');
+        
+        // Hilangkan notifikasi setelah 1 detik
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 1000);
+    }
+
     addToCartButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             const productCard = button.closest('.menu-card');
@@ -50,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${title} added to cart!`);
+            showNotification(`${title} added to cart!`)
         });
     });
 });

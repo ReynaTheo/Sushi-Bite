@@ -116,7 +116,7 @@ const overlay = document.getElementById('popupOverlay');
       const transactionId = Math.floor(Math.random() * 1000000);
       showPopup(`
         <p>Thank you for your order! Your delicious sushi is on its way!</p>
-        <div id="qr-code">QR</div>
+        <img src="../assets/barcode.png" alt="Order Barcode" id="qr-code">
         <p>Transaction ID: ${transactionId}</p>
         <p id="click"><small>Click anywhere to return to the menu</small></p>
       `);
