@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Bite</title>
+    <link rel="stylesheet" href="../css/edit-profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <!-- SIDEBAR CONTENT -->
+            <div class="sidebar">
+                <h3>Membership</h3>
+                    <ul>
+                        <li onclick="toggleProfile()">Profile</li>
+                        <li>Coupons</li>
+                        <li>Purchase History</li>
+                        <li>Order History</li>
+                    </ul>
+                <h3>Profile Settings</h3>
+                    <ul>
+                        <li>Edit Profile</li>
+                        <li>Change My Password</li>
+                    </ul>
+            </div>
+    
+            <!-- PROFILE CONTENT -->
+            <div class="profile-content">
+                <div class="profile-header">
+                    <div class="profile-image-wrapper">
+                        <img src="../assets/profile no bg.png" alt="Profile Picture">
+                        <button class="edit-icon">
+                            ✎
+                        </button>
+                    </div>
+                </div>
+        
+                <div class="edit-profile" id="editForm">
+                    <input type="text" placeholder="First Name" value="Felicia">
+                    <input type="text" placeholder="Last Name" value="Edita">
+                    <input type="text" placeholder="Username" value="Felicia Edita">
+                    <input type="email" placeholder="Email" value="felicia.edita@gmail.com">
+                    <input type="tel" placeholder="Phone Number" value="0812 3904 6470">
+                    <select>
+                        <option value="">Birth Date</option>
+                        <option>1980</option>
+                        <option>1981</option>
+                        <option>1982</option>
+                        <option>1983</option>
+                        <option>1984</option>
+                        <option>1985</option>
+                        <option>1986</option>
+                        <option>1987</option>
+                        <option>1988</option>
+                        <option>1989</option>
+                        <option>1990</option>
+                        <option>1991</option>
+                        <option>1992</option>
+                        <option>1993</option>
+                        <option>1994</option>
+                        <option>1995</option>
+                        <option>1996</option>
+                        <option>1997</option>
+                        <option>1998</option>
+                        <option>1999</option>
+                        <option>2000</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                        <option>2003</option>
+                        <option>2004</option>
+                        <option>2005</option>
+                        <option>2006</option>
+                        <option>2007</option>
+                        <option>2008</option>
+                        <option>2009</option>
+                        <option>2010</option>
+                    </select>
+        
+                    <select>
+                        <option value="">Gender</option>
+                        <option>Female</option>
+                        <option>Male</option>
+                        <option>Other</option>
+                    </select>
+                    <button class="change-password">Change Password</button>
+        
+                </div>
+                <button class="save" onclick="toggleProfile()">Save Profile</button>
+            </div>
+            <div id="saveModal" class="modal">
+                <div class="modal-content">
+                    <p>Are you sure you want to save these changes?</p>
+                    <div class="modal-buttons">
+                    <button onclick="saveChanges()">Yes</button>
+                    <button onclick="closeSaveModal()">No</button>
+                    </div>
+                </div> 
+            </div>
+            <div id="toast" class="toast">Changes saved successfully!</div>  
+        </div>
+    </div> 
+    
+    <script src="../js/edit-profile.js"></script>
+</body>
+</html>

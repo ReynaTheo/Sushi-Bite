@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Bite</title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="sidebar">
+                <h3>Membership</h3>
+                    <ul>
+                        <li>Profile</li>
+                        <li>Coupons</li>
+                        <li>Purchase History</li>
+                        <li>Order History</li>
+                    </ul>
+                <h3>Profile Settings</h3>
+                    <ul>
+                        <li onclick="toggleEdit()">Edit Profile</li>
+                        <li>Change My Password</li>
+                    </ul>
+            </div>
+    
+            <div class="profile-content">
+                <div class="profile-header">
+                <img src="../assets/profile no bg.png">  
+                <div class="info">
+                    <h2 id="displayName">Felicia Edita</h2>
+                    <p id="displayEmail">felicia.edita@gmail.com</p>
+                </div>
+                <button class="edit-btn" onclick="toggleEdit()">Edit Profile</button>
+                </div>
+        
+                <div class="section-list">
+                    <div class="section-item">Favourites <span>&gt;</span></div>
+                    <div class="section-item">Languages <span>&gt;</span></div>
+                    <div class="section-item">Subscription <span>&gt;</span></div>
+                    <div class="section-item">Clear History <span>&gt;</span></div>
+                    <div class="section-item" onclick="toggleBarcode()">Membership Barcode <span id="arrow">&gt;</span></div>
+                        <div id="barcode-section">
+                            <img src="../assets/barcode.png" alt="Membership Barcode">
+                        </div>
+        
+                    <div class="section-item" id="log-out" onclick="toggleRegister()">Log Out <span>&gt;</span></div>
+
+                    <div id="logoutModal" class="modal">
+                        <div class="modal-content">
+                            <p>Are you sure you want to log out?</p>
+                            <div class="modal-buttons">
+                                <button onclick="logout()">Yes</button>
+                                <button onclick="closeLogoutModal()">No</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/profile.js"></script>
+</body>
+</html>

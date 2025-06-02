@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Bite</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-container">
+            <div class="content">
+                <img id="logo" src="../assets/logo sushi bite (1).png" alt="">
+                <form class="register-form-container" action="home.html">
+                    <div class="form-container">
+                        <div class="field-container">
+                            <p class="field-type">Username</p>
+                            <input class="field" type="text" id="username">
+                            <div class="error-message" id="username-error"></div>              
+                        </div>
+        
+                        <div class="field-container">
+                            <p class="field-type">Email</p>
+                            <input class="field" type="text" id="email">
+                            <div class="error-message" id="email-error"></div>              
+                        </div>
+        
+                        <div class="field-container">
+                            <p class="field-type">Password</p>
+                            <input class="field" type="password" id="password">
+                            <div class="error-message" id="password-error"></div>              
+                        </div>
+            
+                        <div class="field-container">
+                            <p class="field-type">Age</p>
+                            <input class="field" type="number" id="age">
+                            <div class="error-message" id="age-error"></div>              
+                        </div>
+                    </div>
+
+                    <div class="gender-container">
+                        <p>Gender</p>
+                        <div class="group-radio-button-container">
+                            <div class="radio-button-container">
+                                <input type="radio" name="gender" id="male" value="male">
+                                <label for="male">Male</label>
+                            </div>
+    
+                            <div class="radio-button-container">
+                                <input type="radio" name="gender" id="female" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                        <div class="error-message" id="gender-error"></div>         
+                    </div>
+
+                    <button class="register-button" id="register-button">
+                        REGISTER
+                    </button>
+
+                    <div class="login-container">
+                        <a href="login.html">Have an account? Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/register.js"></script>
+</body>
+</html>
