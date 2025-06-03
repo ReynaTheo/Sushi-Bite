@@ -207,6 +207,7 @@ footer{
     text-align: center;
     margin-bottom: 30px;
     color: #643236;
+    font-size: 1.8rem;
 }
 
 .founder-content{
@@ -215,11 +216,12 @@ footer{
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 .founder-cards{
     width: 90%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 10px auto;
     display: flex;
     flex-direction: column;
@@ -299,6 +301,12 @@ footer{
     align-items: center;
 }
 
+.founder-left img{
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+
 #dropdown-icon{
     background-color: white;
     width: 100px;
@@ -306,7 +314,12 @@ footer{
 }
 
 .founder-cards-header{
+    margin-top: 40px;
     background-color: white;
+}
+
+.founder-cards-header h3{
+    margin-bottom: 10px;
 }
 
 .founder-card-content{
@@ -315,6 +328,10 @@ footer{
 
 .line-container{
     margin: 15px 0;
+}
+
+.line-container ul{
+    margin-top: 20px;
 }
 
 .line{

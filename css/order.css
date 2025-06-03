@@ -84,22 +84,22 @@ footer{
     margin-bottom: 6px;
 }
 
-.main-container {
+.main-container{
     padding-top: 80px;
     color: #643236;
 }
 
-.order-container {
+.order-container{
     text-align: center;
 }
 
-.order-container p {
+.order-container p{
     padding-top: 15px;
     margin-bottom: 30px;
 }
 
-.info-container, .order-content {
-    max-width: 500px; /* Lebar maksimum konten order */
+.order-content{
+    max-width: 500px;
     margin: 0 auto;
     margin-bottom: 20px;
     background-color: white;
@@ -109,97 +109,96 @@ footer{
     width: 45%;
 }
 
-.info-container input, .info-container textarea {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-.order-items {
+.order-items{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 20px;
     margin: 15px 0;
 }
 
-.order-items-details {
+.order-items-details{
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
 }
 
-.order-items-details img {
-    width: 60px;
-    height: 60px;
+.order-items-details img{
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.order-total {
+.order-total{
     font-weight: bold;
     font-size: 1.2rem;
     margin-top: 20px;
     text-align: right;
 }
 
-.place-order {
+.place-order{
     display: block;
     margin-top: 20px;
     padding: 12px;
-    background-color: #4A2B1B;
-    color: #E6D5B8;
+    background-color: #643236;
+    color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     width: 100%;
     font-weight: 700;
+    font-size: 1rem;
 }
 
-.place-order:hover {
+.place-order:hover{
     background-color: #E6D5B8;
     color: #4A2B1B;
 }
 
-.cancel-order {
+.cancel-order{
     display: block;
     margin-top: 10px;
     padding: 12px;
-    background-color: #4A2B1B;
-    color: #fff;
+    background-color: #643236;
+    color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     width: 100%;
     font-weight: 700;
+    font-size: 1rem;
 }
 
-.cancel-order:hover {
+.cancel-order:hover{
     background-color: #E6D5B8;
-    color: #4A2B1B;
+    color: #643236;
 }
 
-.order-quantity {
-    margin-top: 8px;
+.order-quantity{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 10px;
 }
 
-.order-quantity button {
-    background-color: #4A2B1B;
-    color: #E6D5B8;
+.order-quantity button{
+    background-color: #643236;
+    color: white;
     border: none;
-    padding: 4px 10px;
+    padding: 5px 15px;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.order-quantity span {
+.order-quantity span{
     min-width: 20px;
     text-align: center;
 }
+
 
 /* POP UP */
 
@@ -328,6 +327,23 @@ footer{
         width: 100%;
     }
 
+        .order-items-details{
+        padding: 10px;
+    }
+    
+    .order-items-details img{
+        height: 120px;
+    }
+    
+    .order-quantity{
+        gap: 10px;
+    }
+
+    .order-content{
+        width: 100%;
+    }
+
+
     .place-order,
     .cancel-order {
         font-size: 1rem;
@@ -353,3 +369,7 @@ footer{
         justify-content: flex-start;
     }
 }
+
+
+
+
