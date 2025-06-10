@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
      function showNotification(message) {
-        // Buat elemen notifikasi jika belum ada
         let notification = document.querySelector('.notification');
         if (!notification) {
             notification = document.createElement('div');
@@ -40,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
         notification.textContent = message;
         notification.classList.add('show');
         
-        // Hilangkan notifikasi setelah 1 detik
         setTimeout(() => {
             notification.classList.remove('show');
         }, 1000);

@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.toggle('show');
     });
 
-    // Order functionality
     const cartItemsContainer = document.querySelector('.order-items');
     const totalPriceElement = document.getElementById('total-price');
     const placeOrderButton = document.querySelector('.place-order');
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Format currency helper functions
     function formatPriceToNumber(priceStr) {
         return parseFloat(priceStr.replace(/[^\d.]/g, ''));
     }
@@ -82,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Initialize
     renderCart();
     setupButtonEvents();
 });
@@ -131,13 +128,6 @@ const overlay = document.getElementById('popupOverlay');
       hidePopup();
     };
 
-    // const cancelYes = () => {
-    //   window.location.href = "menu.html";
-    // };
-
-    // const cancelNo = () => {
-    //   hidePopup();
-    // };
 
     document.getElementById('cancelOrderBtn').addEventListener('click', () => {
       showCancelConfirmation();
