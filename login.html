@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Bite</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-container">
+            <div class="content">
+                <img id="logo" src="../assets/logo sushi bite (1).png" alt="">
+                <form class="login-form-container" action="home.html">
+                    <div class="form-container">
+                        <div class="field-container">
+                            <p class="field-type">Email</p>
+                            <input class="field" type="text" id="email">
+                            <div class="error-message" id="email-error"></div>              
+                        </div>
+        
+                        <div class="field-container">
+                            <p class="field-type">Password</p>
+                            <input class="field" type="password" id="password">
+                            <div class="error-message" id="password-error"></div>              
+                        </div>
+                    </div>
+
+                    <button class="login-button" id="login-button">
+                        LOGIN
+                    </button>
+
+                    <div class="register-container">
+                        <a href="register.html">Don't have an account? Register</a>
+                    </div>
+                </form>
+
+                <div class="line-container">
+                    <div class="line"></div>
+                    <div class="text">OR</div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="button-container">
+                    <button class="sign-in-button">
+                        <img id="google" src="../assets/logo google.png" alt="">
+                        Sign in with Google    
+                    </button>
+                    
+                    <button class="sign-in-button">
+                        <img id="facebook" src="../assets/logo facebook.png" alt="">
+                        Sign in with Facebook  
+                    </button>
+                    
+                    <button class="sign-in-button">
+                        <img id="apple" src="../assets/logo apple.png" alt="">
+                        Sign in with Apple                     
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>
