@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if(isEmailValid && isPasswordValid) {
             alert('Login Successful!');
-            window.location.href = 'html/home.html';
+            window.location.href = './html/home.html';
         } else {
             alert('Login Failed! Please check your data again.');
         }
